@@ -11,14 +11,17 @@ export default {
   data(){
     return{
       text:""
-    };
+    }
   },
   methods:{
-    userClick(){
-      this.text.push(
-        
-      )
-    }
+ async created(){
+   const item=await axios.get(
+     'https://console.postcode-jp.com/key/rrwf6ibXcdcwxEr8poWbV0u6bp6FRNHRjQcqD3M=text=metric&aooid=rrwf6ibXcdcwxEr8poWbV0u6bp6FRNHRjQcqD3M'
+   )
+  },
+  userClick(){
+    this.text.push(item)
   }
-}
+  }
+  };
 </script>
