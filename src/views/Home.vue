@@ -18,8 +18,12 @@ export default {
    const item=await axios.get(
      'https://console.postcode-jp.com/key/rrwf6ibXcdcwxEr8poWbV0u6bp6FRNHRjQcqD3M=text=metric&aooid=rrwf6ibXcdcwxEr8poWbV0u6bp6FRNHRjQcqD3M'
    )
-     this.text.push({text})
+   console.log(item);
+  },
+  userClick(){
+    this.item.push("item")
+  },
+  props:["item"]
   }
   }
-  };
 </script>
